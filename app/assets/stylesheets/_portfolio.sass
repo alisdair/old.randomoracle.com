@@ -1,0 +1,56 @@
++keyframes(gallery)
+  0%
+    opacity: 0
+  45%
+    opacity: 0
+  55%
+    opacity: 1
+  100%
+    opacity: 1
+
+#portfolio
+  overflow: auto
+
+  h1
+    background: darken($green, 10%)
+    color: white
+
+  h2
+    +leader(0)
+
+  .column
+    +trailer(2)
+    width: 33%
+    float: left
+
+  .gallery
+    width: 66%
+    float: left
+    position: relative
+    min-height: 430px
+
+    img
+      display: block
+      margin-left: 0
+      margin-right: 0
+      position: absolute
+      top: 0
+      left: 0
+
+      &.top
+        -webkit-animation: gallery 5s infinite alternate ease-in-out
+        animation: gallery 5s infinite alternate ease-in-out
+
+  @media screen and (max-width: $mobile-breakpoint)
+    .column, .gallery
+      width: auto
+      float: none
+
+    .gallery
+      +leader(2)
+      min-height: 242px
+
+      img
+        max-width: 100%
+        height: auto
+

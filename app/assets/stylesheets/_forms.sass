@@ -1,0 +1,66 @@
+label
+  color: #555
+  display: block
+  abbr[title]
+    color: $purple
+    text-decoration: none
+    border-bottom: none
+    cursor: help
+
+input, select, textarea
+  +trailer(1)
+  +adjust-font-size-to($base-font-size, 2)
+  display: block
+  width: 100%
+
+input, textarea, select
+  +padding-leader(0.5)
+  +padding-trailer(0.5)
+  +box-shadow(inset 0 0 3px rgba(0, 0, 0, 0.1))
+  border: 1px solid #bbb
+  padding-left: 0.5em
+  padding-right: 0.5em
+  height: rhythm(3)
+  &:focus
+    outline: 0
+    border-color: $green
+    +box-shadow(0 0 5px transparentize($green, 0.5))
+
+textarea
+  +default-font
+  height: rhythm(7)
+
+.input
+  position: relative
+
+  .error
+    +adjust-font-size-to(12px, 1)
+    padding: 0.25em
+    color: $red
+    background: #fff
+    position: absolute
+    bottom: 0.5em
+    right: 0.5em
+
+  input:focus + .error, textarea:focus + .error
+    display: none
+
+button
+  +heading-font
+  +adjust-font-size-to(24px, 2)
+  +leader(1)
+  +padding-leader(1)
+  +padding-trailer(1)
+  +transition-property(background)
+  +transition-duration(150ms)
+  cursor: pointer
+  border: none
+  width: 50%
+  background: $purple
+  color: #fff
+  &:hover
+    background: $dark-purple
+
+@media screen and (max-width: $mobile-breakpoint)
+  button
+    width: 100%

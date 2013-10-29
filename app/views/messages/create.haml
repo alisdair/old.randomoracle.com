@@ -1,0 +1,14 @@
+#contact
+  - if @message.valid?
+    :markdown
+      # Message received!
+
+      Thanks for your message. I'll get back to you as soon as possible. If you think of anything to add, please email me at [alisdair@randomoracle.com](mailto:alisdair@randomoracle.com).
+
+  - else
+    :markdown
+      # Contact form
+
+      There were some problems with your message. Please add the required information and try again:
+
+    = render "form"

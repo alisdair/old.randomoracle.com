@@ -1,0 +1,13 @@
+#footer
+  +leader(2)
+  +padding-leader(2)
+  +padding-trailer(2)
+  +adjust-font-size-to(12px, 1)
+  +background(linear-gradient(top, #444 80%, #333))
+  +box-shadow(inset 0 -5px 5px 5x rgba(0, 0, 0, 0.1))
+  color: #fff
+  text-align: center
+
+@media screen and (max-width: $mobile-breakpoint)
+  #footer
+    +adjust-font-size-to(10px, 1)

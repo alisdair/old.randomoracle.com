@@ -1,0 +1,49 @@
+#contact
+  overflow: auto
+
+  h1
+    background: $blue
+    color: #fff
+
+  .contact_details
+    +trailer(4)
+    width: 33%
+    float: left
+    padding-left: 2em
+
+    .input
+      margin-right: 2em
+
+  .project_details
+    +trailer(4)
+    width: 67%
+    float: left
+    padding-right: 2em
+
+  .message_project_name, .message_budget
+    width: 50%
+    float: left
+
+  .message_project_name
+    padding-right: 1em
+
+  .message_budget
+    padding-left: 1em
+
+  @media screen and (max-width: $mobile-breakpoint)
+    .contact_details, .project_details
+      +trailer(3)
+      width: auto
+      float: none
+      padding-left: 2em
+    .message_project_name, .message_budget
+      width: auto
+      float: none
+      padding: 0
+
+  .message_deadlines textarea
+    height: rhythm(5)
+
+  p
+    padding-left: 2em
+    padding-right: 2em

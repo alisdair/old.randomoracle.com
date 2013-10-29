@@ -1,0 +1,20 @@
+// Main strapline at top of page
+$experimental-support-for-svg: true
+#strapline
+  +heading-font
+  background-color: #444
+  +background(linear-gradient(top, #444 80%, #333))
+  +box-shadow(inset 0 0 5px 5px rgba(0, 0, 0, 0.1))
+  +adjust-font-size-to(64px, 8)
+  @media screen and (max-width: $mobile-breakpoint)
+    +adjust-font-size-to(26px, 6)
+  color: #fff
+  text-align: center
+
+// Top-level headings are straplines too
+#wrapper > div > h1
+  +box-shadow(inset 0 0 5px 5px rgba(127, 127, 127, 0.1))
+  +adjust-font-size-to(40px, 3)
+  +padding-leader(0.5)
+  +padding-trailer(0.5)
+  text-align: center

@@ -1,0 +1,64 @@
++establish-baseline
+
+= default-font
+  font-family: "adelle-sans", sans-serif
+
+= bold-font
+  font-weight: 700
+  font-style: normal
+
+= italic-font
+  font-weight: 400
+  font-style: italic
+
+= bold-italic-font
+  font-weight: 800
+  font-style: italic
+
+= heading-font
+  font-family: "adelle", sans-serif
+  font-weight: 600
+
+= light-heading-font
+  font-family: "adelle", sans-serif
+  font-weight: 400
+
+html
+  +adjust-leading-to(2)
+  +default-font
+
+@media screen and (max-width: $mobile-breakpoint)
+  p, blockquote
+    +hyphens(manual)
+
+@for $i from 1 through 6
+  h#{$i}
+    $font-size: nth($heading-font-sizes, $i)
+    +heading-font
+    +adjust-font-size-to($font-size)
+    +leader(2, $font-size)
+    +trailer(1, $font-size)
+
+h1
+  +trailer(2, nth($heading-font-sizes, 1))
+
+p
+  +leader(0)
+  +trailer(2)
+
+a
+  text-decoration: none
+  +transition-property(color)
+  +transition-duration(200ms)
+  +link-colors($blue, $purple, $green)
+
+em, strong
+  +bold-font
+
+blockquote
+  +italic-font
+  margin: 0
+
+ul
+  list-style: square inside
+  padding: 0

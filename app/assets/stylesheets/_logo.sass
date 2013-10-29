@@ -1,0 +1,32 @@
+#logo
+  +leader(2)
+  +trailer(2)
+  overflow: auto
+  position: relative
+
+  .logo
+    display: block
+    float: left
+    margin: 0 0 0 $gutter-width
+    line-height: 1em
+    overflow: auto
+    img
+      display: block
+
+  .hello
+    +adjust-font-size-to(20px, 2)
+    padding-top: 30px
+    float: right
+    margin: 0 $gutter-width 0 0
+
+@media screen and (max-width: $mobile-breakpoint)
+  #logo
+    height: auto
+
+    .logo, img
+      float: none
+      margin: 0 auto
+      text-align: center
+
+    .hello
+      display: none

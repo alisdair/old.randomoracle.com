@@ -1,0 +1,87 @@
+#strapline
+  I build web apps.
+
+#pitch
+  .about.column
+    %h1 Software Engineer from Glasgow, Scotland.
+
+    %p Does your business need better software to grow? Whether you're an early-stage startup, or an estab&shy;lished company with new direc&shy;tions, Random Oracle offers the software expertise that you need.
+
+  .team.column
+    .photo
+      = image_tag "alisdair.jpg", alt: "Photo of Alisdair McDiarmid"
+
+    :markdown
+      ## Alisdair McDiarmid
+
+      Experienced full stack web developer and software engineer. Working with Ruby on Rails since 2005 and building for the web since 1996. Currently into Rails APIs, functional JavaScript, micro&shy;controllers, and teaching.
+
+  .about.column
+    %figure.quote
+      %blockquote
+        Alisdair delivered great results for us. His impressive productivity helped us release version 1 of the core product to our clients on time. Extremely professional throughout.
+      %figcaption
+        Steven Drost,
+        = link_to "Stipso", "http://www.stipso.com/"
+
+    %figure.quote
+      %blockquote
+        Random Oracle’s contribu&shy;tions to our tech demo helped us secure vital early cus&shy;tomers, and supported the cre&shy;ation of a spinout company. Highly recommended.
+      %figcaption
+        Stephen McArthur,
+        = link_to "University of Strathclyde", "http://www.strath.ac.uk/eee"
+
+    :markdown
+      I have a track record of producing high quality software to meet business needs, both for the web and in embedded systems. I'm now consulting full time because I love hearing other people's ideas, getting excited about them, and helping to make them happen.
+
+      Interested in *Ruby* and *JavaScript* projects. [Get in touch!](#contact)
+
+  .team.column
+    %ul.links
+      %li= link_to "GitHub", "https://github.com/alisdair"
+      %li= link_to "Codepen", "http://codepen.io/alisdair/"
+      %li= link_to "LinkedIn", "http://uk.linkedin.com/in/amcdiarmid"
+      %li= link_to "Weblog", "http://alisdair.mcdiarmid.org"
+
+#portfolio
+  %h1 Recent work
+
+  .column
+    :markdown
+      ## Stipso: Toolkit
+
+      Built [Stipso](http://www.stipso.com/)'s Toolkit, a novel living infographic editor. Worked remotely with the Stipso core team to produce version 1.0.
+
+      Features an intuitive and powerful drag & drop interface, with modal forms to create and modify info&shy;graphic elements. Now in beta!
+
+      * Ruby on Rails 4 REST API
+      * Ember 1.0 with Ember Data
+      * Custom d3.js visualisations
+      * CoffeeScript, HAML, SASS
+
+  .gallery.column
+    = image_tag "stipple-editor.png", size: "568x430"
+    = image_tag "stipple-form.png", size: "568x430", class: "top"
+
+  .column
+    :markdown
+      ## ETS: Base Station
+
+      System design and software implementation for the [ETS Silent Herdsman](http://www.embeddedtech.co.uk/) base station.
+
+      Combines multiple custom embedded systems to operate as the linchpin of the farm sensor network. Includes C99 & JavaScript powered single-page web app for remote support and diagnostics.
+
+      * Embedded JSON API web app
+      * Microcontroller/interfacing
+      * Linux management software
+      * C99, JavaScript, HTML, CSS
+
+  .gallery.column
+    = image_tag "ets-base-station.png", size: "568x448"
+
+#contact
+  %h1 Contact form
+
+  %p You can hire me to design and build your prototype, minimum viable product, or to augment your existing software. Fill in the project request form below, and I'll get back to you the next working day.
+
+  = render "messages/form"

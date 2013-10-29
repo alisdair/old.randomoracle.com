@@ -1,0 +1,31 @@
+!!!
+%html{lang: "en"}
+  %head
+    %title Random Oracle Ltd: Software Engineer from Glasgow, Scotland
+    = stylesheet_link_tag "application"
+    = favicon_link_tag
+    %meta{name: "viewport", content: "initial-scale=1.0"}
+    %script{type: "text/javascript", src: "//use.typekit.net/ejd2jcw.js"}
+    :javascript
+      try{Typekit.load();}catch(e){}
+  %body
+    #wrapper
+      #logo
+        %a.logo{href: "/"}
+          = image_tag "logo.svg", alt: "Random Oracle", size: "285x96"
+        .hello
+          = mail_to "hello@randomoracle.com"
+
+      = yield
+
+      #footer
+        Random Oracle Ltd. Registered in Scotland. Company number SC302398. Registered Office: 3/2, 60 Craigpark, Glasgow, G31 2NN.
+
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-40718728-1', 'randomoracle.com');
+      ga('send', 'pageview');

@@ -1,0 +1,74 @@
+#pitch
+  +leader(2)
+  position: relative
+  overflow: auto
+
+  h1
+    +adjust-font-size-to(24px, 2)
+    +leader(0)
+    +trailer(1)
+    text-align: center
+
+  @media screen and (max-width: $mobile-breakpoint)
+    h1
+      +adjust-font-size-to(22px, 2)
+  
+  .about
+    width: 66%
+    float: left
+
+  .team
+    width: 34%
+    float: right
+
+    img
+      +border-radius(15px)
+      height: 15em
+      margin: 0 auto 0.375em auto
+
+  @media screen and (max-width: $mobile-breakpoint)
+    .about, .team
+      width: auto
+      float: none
+    .team
+      +leader(2)
+
+  .links
+    +leader(0)
+    +trailer(1)
+    +clearfix
+    list-style: none
+    clear: both
+    width: 100%
+    a
+      +rhythm-borders(2px, 0.5, $base-font-size)
+      border-color: white
+      +transition-property(background)
+      +transition-duration(150ms)
+      +link-colors(darken($green, 10%), $dark-green)
+      float: left
+      width: 50%
+      display: block
+      text-align: center
+      background: #f7f7f7
+      &:hover
+        background: #eee
+    li:nth-child(odd) a
+      border-left: none
+    li:nth-child(even) a
+      border-right: none
+
+figure.quote
+  +border-radius(15px)
+  +box-shadow(inset 0 0 3px rgba(0, 0, 0, 0.1))
+  +trailer(2)
+  +rhythm-borders(1px, 1, $base-font-size)
+  border-style: solid
+  border-color: #ddd
+  padding-left: 1em
+  padding-right: 1em
+  background: #f0f0f0
+
+  figcaption
+    +bold-font
+    text-align: right

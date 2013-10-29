@@ -1,0 +1,16 @@
+= simple_form_for @message do |f|
+  .contact_details
+    = f.input :name
+    = f.input :organisation
+    = f.input :email_address
+    = f.input :phone_number, required: false
+
+  .project_details
+    = f.input :project_name, required: false
+    = f.input :budget, collection: ["£2000–£5000", "£5000–£10000", "£10000–£20000", "More than £20000"], selected: "£5000–£10000", required: false
+    = f.input :deadlines, as: :text, label: "What are your deadlines?", required: false
+    = f.input :description, as: :text, label: "Describe the project. What do you need?"
+
+    .submit
+      %button Send message
+
