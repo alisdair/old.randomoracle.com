@@ -3,6 +3,7 @@
   %head
     %title Random Oracle Ltd: Software Engineer from Glasgow, Scotland
     = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
     = favicon_link_tag
     %meta{name: "viewport", content: "initial-scale=1.0"}
     %script{type: "text/javascript", src: "//use.typekit.net/ejd2jcw.js"}
@@ -12,7 +13,7 @@
     #wrapper
       #logo
         %a.logo{href: "/"}
-          = image_tag "logo.svg", alt: "Random Oracle", size: "285x96"
+          = image_tag "logo.svg", alt: "Random Oracle", size: "285x96", data: { fallback: image_url("logo.png") }
         .hello
           = mail_to "hello@randomoracle.com"
 
