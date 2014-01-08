@@ -13,7 +13,7 @@ gem 'dotenv-rails', groups: [:development, :test, :production]
 
 gem 'jquery-rails'
 gem 'sass-rails', '~> 4.0.0'
-gem 'compass-rails', '~> 2.0.alpha.0'
+gem 'compass-rails', '~> 1.1.3'
 gem 'uglifier'
 gem 'therubyracer'
 
