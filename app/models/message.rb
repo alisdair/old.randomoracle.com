@@ -9,13 +9,16 @@ class Message
     :project_name,
     :budget,
     :deadlines,
-    :description
+    :description,
+    :horse
   )
 
   validates :name, presence: true
   validates :organisation, presence: true
   validates :email_address, presence: true
   validates :description, presence: true
+
+  validates :horse, absence: { message: "no horses allowed" }
 
   def persisted?
     false

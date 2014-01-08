@@ -4,6 +4,7 @@
     = f.input :organisation
     = f.input :email_address
     = f.input :phone_number, required: false
+    = f.input :horse, label: "Are you a horse?", required: false, wrapper_html: { class: "hidden" }
 
   .project_details
     = f.input :project_name, required: false
